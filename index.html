@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanmay Deshpande | Elite Engineering Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
+
+    body{
+      background: radial-gradient(circle at top,#070b16,#04050a);
+      color:#e5e7eb;
+      overflow-x:hidden;
+    }
+
+    a{color:#60a5fa;text-decoration:none;}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;width:100%;
+      display:flex;justify-content:center;gap:22px;
+      padding:14px;
+      background:rgba(10,15,30,0.7);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      z-index:999;
+    }
+
+    .nav a{font-size:13px;color:#cbd5e1;transition:0.3s;}
+    .nav a:hover{color:#60a5fa;}
+
+    /* HERO */
+    .hero{
+      padding:150px 20px 90px;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero h1{
+      font-size:56px;
+      font-weight:800;
+      background:linear-gradient(90deg,#60a5fa,#a78bfa,#34d399);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:fadeUp 1s ease;
+    }
+
+    .hero p{
+      margin-top:12px;
+      color:#94a3b8;
+      font-size:18px;
+      animation:fadeUp 1.2s ease;
+    }
+
+    .badge{
+      margin-top:18px;
+      display:inline-block;
+      padding:6px 14px;
+      border-radius:20px;
+      background:rgba(96,165,250,0.1);
+      border:1px solid rgba(96,165,250,0.3);
+      font-size:13px;
+      color:#93c5fd;
+    }
+
+    .cta{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:600;
+      font-size:14px;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .primary{
+      background:linear-gradient(90deg,#60a5fa,#a78bfa);
+      color:#0b1220;
+    }
+
+    .secondary{
+      border:1px solid rgba(255,255,255,0.15);
+      color:#e5e7eb;
+    }
+
+    .btn:hover{transform:translateY(-2px);}
+
+    /* CONTAINER */
+    .container{max-width:1100px;margin:auto;padding:40px 20px;}
+
+    section{margin-bottom:80px;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+    section.show{opacity:1;transform:translateY(0);}
+
+    h2{
+      font-size:26px;
+      margin-bottom:18px;
+      border-left:4px solid #60a5fa;
+      padding-left:12px;
+    }
+
+    /* CARDS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:15px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:18px;
+      border-radius:14px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(96,165,250,0.5);
+      box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    .title{font-weight:600;margin-bottom:8px;}
+
+    ul{padding-left:18px;color:#cbd5e1;font-size:14px;}
+
+    /* METRICS */
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+    }
+
+    .metric{
+      text-align:center;
+      padding:16px;
+      border-radius:12px;
+      background:rgba(96,165,250,0.08);
+      border:1px solid rgba(96,165,250,0.2);
+      font-weight:600;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:30px;
+      font-size:13px;
+      color:#64748b;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    /* SMALL FLOAT EFFECT */
+    .glow{
+      position:absolute;
+      top:0;left:50%;
+      width:400px;height:400px;
+      background:radial-gradient(circle,#60a5fa33,transparent);
+      transform:translateX(-50%);
+      filter:blur(60px);
+      z-index:-1;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#publications">Research</a>
+  <a href="#patents">Patents</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="hero">
+  <div class="glow"></div>
+  <h1>Tanmay Deshpande</h1>
+  <p>Industrial Engineer | Manufacturing Systems | Optimization | Supply Chain</p>
+  <div class="badge">Texas A&M University | MS Industrial Engineering</div>
+
+  <div class="cta">
+    <a class="btn primary" href="#projects">View Projects</a>
+    <a class="btn secondary" href="mailto:tanmay_8688@tamu.edu">Contact Me</a>
+  </div>
+</div>
+
+<div class="container">
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+Industrial Engineer specializing in manufacturing systems, optimization, and data-driven decision making. Experienced across industry, research, and entrepreneurship with strong focus on real-world impact.
+</div>
+</section>
+
+<section>
+<h2>Impact Metrics</h2>
+<div class="metrics">
+<div class="metric">30% Cost Reduction</div>
+<div class="metric">25% Capacity Gain</div>
+<div class="metric">12% Cycle Time Reduction</div>
+<div class="metric">2 Patents</div>
+<div class="metric">1 Springer Paper</div>
+<div class="metric">Lean Six Sigma</div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="card"><div class="title">Facility Specialist – Texas A&M</div><ul><li>95% satisfaction</li><li>1000+ transactions/semester</li><li>35% efficiency improvement</li></ul></div>
+
+<div class="card"><div class="title">Manufacturing Engineer – Invenzee</div><ul><li>12% cycle time reduction</li><li>SolidWorks + CNC operations</li></ul></div>
+
+<div class="card"><div class="title">Founder – Mushak Online</div><ul><li>50% sales growth</li><li>70% customer expansion</li></ul></div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="card"><div class="title">DOE Optimization Framework</div><ul><li>40% fewer experiments</li><li>ANOVA-based analysis</li></ul></div>
+
+<div class="card"><div class="title">Inventory Optimization System</div><ul><li>$100K savings</li><li>Monte Carlo + FMEA</li></ul></div>
+
+<div class="card"><div class="title">Capacity Optimization</div><ul><li>25% improvement</li><li>30% cost reduction</li></ul></div>
+</section>
+
+<section id="publications">
+<h2>Research</h2>
+<div class="card">Springer Publication – Metal Additive Manufacturing Simulation</div>
+</section>
+
+<section id="patents">
+<h2>Patents</h2>
+<div class="card">Gravity-to-Electricity System</div>
+<div class="card">Smart Mask Bracket System</div>
+</section>
+
+<section id="leadership">
+<h2>Leadership</h2>
+<div class="card">Managed 3,500+ student event</div>
+<div class="card">Led 6,000+ student organization initiatives</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: tanmay_8688@tamu.edu<br>
+LinkedIn: linkedin.com/in/tanmaydeshpande1907<br><br>
+<a class="btn primary" href="#">Download Resume</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Tanmay Deshpande | Elite Industrial Engineering Portfolio
+</footer>
+
+<script>
+// scroll reveal
+const sections=document.querySelectorAll('section');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('show');}
+  });
+},{threshold:0.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+
+</body>
+</html>
