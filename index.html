@@ -1,295 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tanmay Deshpande - Industrial Engineer specializing in manufacturing systems, optimization, supply chain, Lean Six Sigma, and process improvement." />
-  <meta name="keywords" content="Industrial Engineer, Manufacturing Engineer, Supply Chain, Optimization, Texas A&M, Lean Six Sigma, Process Improvement" />
-  <meta name="author" content="Tanmay Deshpande" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tanmay Deshpande | FAANG-Level Engineering Portfolio</title>
+<title>Tanmay Deshpande | Industrial Engineer Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
-    body{
-      background: radial-gradient(circle at top,#060a14,#03040a);
-      color:#e5e7eb;
-      overflow-x:hidden;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
 
-    a{color:#60a5fa;text-decoration:none;}
+body{
+  background:#050816;
+  color:#e2e8f0;
+}
 
-    /* NAV */
-    .nav{
-      position:fixed;top:0;width:100%;
-      display:flex;justify-content:center;gap:20px;
-      padding:14px;
-      background:rgba(10,15,30,0.75);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      z-index:999;
-    }
+.nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  background:rgba(0,0,0,0.7);
+}
 
-    .nav a{font-size:13px;color:#cbd5e1;transition:0.3s;}
-    .nav a:hover{color:#60a5fa;}
+.nav a{color:#cbd5f5;text-decoration:none;font-size:14px;}
 
-    /* HERO */
-    .hero{
-      padding:160px 20px 90px;
-      text-align:center;
-      position:relative;
-    }
+.hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
 
-    .hero h1{
-      font-size:60px;
-      font-weight:800;
-      background:linear-gradient(90deg,#60a5fa,#a78bfa,#34d399);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
+.hero h1{
+  font-size:52px;
+  background:linear-gradient(90deg,#60a5fa,#34d399);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .hero p{
-      margin-top:12px;
-      color:#94a3b8;
-      font-size:18px;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
 
-    .badge{
-      margin-top:18px;
-      display:inline-block;
-      padding:6px 14px;
-      border-radius:20px;
-      background:rgba(96,165,250,0.1);
-      border:1px solid rgba(96,165,250,0.3);
-      font-size:13px;
-      color:#93c5fd;
-    }
+h2{
+  margin:50px 0 20px;
+  border-left:4px solid #60a5fa;
+  padding-left:10px;
+}
 
-    .cta{margin-top:25px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
 
-    .btn{
-      padding:10px 16px;
-      border-radius:8px;
-      font-weight:600;
-      font-size:14px;
-      transition:0.3s;
-      cursor:pointer;
-      display:inline-block;
-    }
+.card{
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.05);
+}
 
-    .primary{background:linear-gradient(90deg,#60a5fa,#a78bfa);color:#0b1220;}
-    .secondary{border:1px solid rgba(255,255,255,0.15);color:#e5e7eb;}
+.card:hover{
+  transform:translateY(-5px);
+}
 
-    .btn:hover{transform:translateY(-2px);}
+.metric{
+  font-size:28px;
+  font-weight:700;
+}
 
-    /* CONTAINER */
-    .container{max-width:1100px;margin:auto;padding:40px 20px;}
+small{color:#94a3b8;}
 
-    section{margin-bottom:90px;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
-    section.show{opacity:1;transform:translateY(0);}
-
-    h2{font-size:26px;margin-bottom:18px;border-left:4px solid #60a5fa;padding-left:12px;}
-
-    /* CARDS */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
-
-    .card{
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.06);
-      padding:18px;
-      border-radius:14px;
-      transition:0.3s;
-      cursor:pointer;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
-      border-color:rgba(96,165,250,0.5);
-      box-shadow:0 15px 40px rgba(0,0,0,0.5);
-    }
-
-    .title{font-weight:600;margin-bottom:8px;}
-
-    ul{padding-left:18px;color:#cbd5e1;font-size:14px;}
-
-    /* METRICS COUNTER */
-    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
-
-    .metric{
-      text-align:center;
-      padding:18px;
-      border-radius:12px;
-      background:rgba(96,165,250,0.08);
-      border:1px solid rgba(96,165,250,0.2);
-      font-weight:700;
-      font-size:18px;
-    }
-
-    .metric small{display:block;font-size:12px;color:#93c5fd;font-weight:400;}
-
-    /* MODAL */
-    .modal{
-      display:none;
-      position:fixed;
-      top:0;left:0;width:100%;height:100%;
-      background:rgba(0,0,0,0.8);
-      justify-content:center;
-      align-items:center;
-      z-index:1000;
-    }
-
-    .modal-content{
-      background:#0f172a;
-      padding:20px;
-      border-radius:12px;
-      max-width:600px;
-      border:1px solid rgba(255,255,255,0.1);
-    }
-
-    .close{float:right;cursor:pointer;color:#fff;}
-
-    footer{
-      text-align:center;
-      padding:30px;
-      font-size:13px;
-      color:#64748b;
-      border-top:1px solid rgba(255,255,255,0.05);
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  color:#64748b;
+}
+</style>
 </head>
 
 <body>
 
 <div class="nav">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#patents">Patents</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 </div>
 
 <div class="hero">
-  <h1>Tanmay Deshpande</h1>
-  <p>Industrial Engineer | Manufacturing | Optimization | Supply Chain</p>
-  <div class="badge">Texas A&M University | MS Industrial Engineering</div>
-
-  <div class="cta">
-    <a class="btn primary" href="#projects">Explore Work</a>
-    <a class="btn secondary" href="mailto:tanmay_8688@tamu.edu">Contact</a>
-  </div>
+<h1>Tanmay Deshpande</h1>
+<p>Industrial Engineer | Manufacturing | Optimization | Supply Chain</p>
+<p>Texas A&M University | MS Industrial Engineering</p>
 </div>
 
 <div class="container">
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About</h2>
 <div class="card">
-Industrial Engineer focused on manufacturing systems, optimization, and data-driven decision making across industry, research, and entrepreneurship.
+Industrial Engineer specializing in manufacturing systems, optimization, and supply chain analytics. Proven experience in process improvement, Lean Six Sigma, and data-driven decision making across industry, research, and entrepreneurship.
 </div>
 </section>
 
+<!-- METRICS -->
 <section>
-<h2>Impact Metrics</h2>
-<div class="metrics">
-<div class="metric" data-target="30">0<small>% Cost Reduction</small></div>
-<div class="metric" data-target="25">0<small>% Capacity Gain</small></div>
-<div class="metric" data-target="12">0<small>% Cycle Time Reduction</small></div>
-<div class="metric" data-target="2">0<small>Patents</small></div>
-<div class="metric" data-target="1">0<small>Springer Paper</small></div>
-<div class="metric" data-target="100">0<small>% Execution Accuracy</small></div>
+<h2>Impact</h2>
+<div class="grid">
+<div class="card"><div class="metric">30%</div><small>Cost Reduction</small></div>
+<div class="card"><div class="metric">35%</div><small>Efficiency Improvement</small></div>
+<div class="card"><div class="metric">$100K</div><small>Projected Savings</small></div>
+<div class="card"><div class="metric">70%</div><small>Customer Growth</small></div>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
-<div class="card" onclick="openModal('Rec Sports: 35% efficiency improvement through operations management across 1000+ transactions/semester.')">
-<div class="title">Texas A&M Rec Sports</div>
-<ul><li>Facility operations & customer service optimization</li></ul>
+
+<div class="grid">
+
+<div class="card">
+<h3>Manufacturing Engineer – Invenzee</h3>
+<ul>
+<li>Reduced cycle time by 12% through workflow optimization</li>
+<li>Optimized CNC operations and GD&T tooling</li>
+<li>Ensured OSHA compliance and quality control</li>
+</ul>
 </div>
 
-<div class="card" onclick="openModal('Manufacturing Engineer: 12% cycle time reduction, CNC + SolidWorks + GD&T optimization.')">
-<div class="title">Invenzee Technologies</div>
-<ul><li>Manufacturing process optimization</li></ul>
+<div class="card">
+<h3>Project Intern – Mahindra CIE</h3>
+<ul>
+<li>Improved die life analysis across 11 dies</li>
+<li>Reduced costs by 19% via optimization</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Founder – Mushak Online</h3>
+<ul>
+<li>Scaled e-commerce platform → 70% customer growth</li>
+<li>Led 8-member team and 15+ vendors</li>
+<li>Achieved 6-figure revenue</li>
+</ul>
+</div>
+
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
-<div class="card" onclick="openModal('DOE Framework: Reduced experiments by 40%, ANOVA-based decision system across 10+ case studies.')">
-<div class="title">DOE Optimization Framework</div>
+<div class="grid">
+
+<div class="card">
+<h3>Warehouse Optimization</h3>
+<p>Integer programming model reducing forklift time by 18%</p>
 </div>
 
-<div class="card" onclick="openModal('Inventory System: $100K savings, Monte Carlo + FMEA risk reduction system.')">
-<div class="title">Inventory Optimization System</div>
+<div class="card">
+<h3>Inventory System</h3>
+<p>$100K savings using Monte Carlo & FMEA</p>
+</div>
+
+<div class="card">
+<h3>DOE Framework</h3>
+<p>Reduced experiments by 40% using ANOVA</p>
+</div>
+
+<div class="card">
+<h3>Capacity Optimization</h3>
+<p>35% efficiency improvement using Lean tools</p>
+</div>
+
 </div>
 </section>
 
-<section id="patents">
-<h2>Patents</h2>
-<div class="card" onclick="openModal('Gravity energy conversion system using bidirectional motion and sensor automation.')">Gravity-to-Electricity System</div>
-<div class="card" onclick="openModal('IoT-based face mask bracket improving ergonomics and communication.')">Mask Bracket Innovation</div>
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills & Tools</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Software</h3>
+<p>AMPL, Minitab, AutoCAD, SolidWorks, ANSYS, Power BI, Tableau</p>
+</div>
+
+<div class="card">
+<h3>Technical</h3>
+<p>Lean, Six Sigma, VSM, JIT, KPI, Process Mapping, SQL</p>
+</div>
+
+<div class="card">
+<h3>Certifications</h3>
+<p>Lean Six Sigma Green Belt, Supply Chain Management</p>
+</div>
+
+</div>
 </section>
 
+<!-- EDUCATION -->
+<section>
+<h2>Education</h2>
+<div class="card">
+Texas A&M University – MS Industrial Engineering  
+<br>VIT Pune – B.Tech Mechanical Engineering
+</div>
+</section>
+
+<!-- PATENTS -->
+<section>
+<h2>Patents & Research</h2>
+<div class="card">
+Sensor-Based Automated Sunroof System (Copyright Registered)
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
-Email: tanmay_8688@tamu.edu<br>
-LinkedIn: linkedin.com/in/tanmaydeshpande1907<br><br>
-<a class="btn primary" href="#">Download Resume</a>
+Email: tanmay_8688@tamu.edu  
+<br>LinkedIn: linkedin.com/in/tanmaydeshpande1907
 </div>
 </section>
 
 </div>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <p id="modalText"></p>
-  </div>
-</div>
-
-<footer>© 2026 Tanmay Deshpande | FAANG-Level Engineering Portfolio</footer>
-
-<script>
-// scroll animation
-const sections=document.querySelectorAll('section');
-const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')})},{threshold:0.1});
-sections.forEach(s=>obs.observe(s));
-
-// counter animation
-const counters=document.querySelectorAll('.metric');
-const runCounter=()=>{
-  counters.forEach(c=>{
-    let t=+c.getAttribute('data-target');
-    let count=0;
-    let step=t/60;
-    let interval=setInterval(()=>{
-      count+=step;
-      if(count>=t){count=t;clearInterval(interval);}
-      c.firstChild.textContent=Math.floor(count);
-    },20);
-  });
-};
-runCounter();
-
-// modal
-function openModal(text){
-  document.getElementById('modalText').innerText=text;
-  document.getElementById('modal').style.display='flex';
-}
-function closeModal(){
-  document.getElementById('modal').style.display='none';
-}
-window.onclick=function(e){
-  if(e.target.id==='modal') closeModal();
-}
-</script>
+<footer>
+© 2026 Tanmay Deshpande | Industrial Engineering Portfolio
+</footer>
 
 </body>
 </html>
